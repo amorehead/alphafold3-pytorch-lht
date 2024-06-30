@@ -475,6 +475,8 @@ def cluster_interfaces(
                 interface_chains_cluster_mapping[(chain_clusters[0], chain_clusters[1])] = len(
                     interface_chains_cluster_mapping
                 )
+            elif len(chain_clusters) != 2:
+                continue
             chain_cluster_0 = chain_clusters[0].split("-")[-1]
             chain_cluster_1 = chain_clusters[1].split("-")[-1]
             interface_cluster_mapping = (
